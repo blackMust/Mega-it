@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Medai last</string>
+
+    <string name="status">status: </string>
+
+    <string name="pickadate">Pick a date</string>
+    <string name="new_visitor">New</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="time" translatable="false">12/09/2022</string>
+    <string name="save">Save</string>
+    <string name="heure_min" translatable="false">00:00</string>
+    <string name="Title">Title</string>
+    <string name="result">Result....</string>
+    <string name="date" translatable="false">Date :</string>
+    <string name="surgery">Surgery</string>
+    <string name="result2">Result</string>
+    <string name="send">Send</string>
+    <string name="print">Print</string>
+    <string name="lab_test">Lab tests report</string>
+    <string name="log_out" translatable="false">Log out</string>
+    <string name="change_the_password">change the password</string>
+    <string name="setting">Setting</string>
+    <string name="title_activity_inscription" translatable="false">Inscription</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="birthdate">Birthdate</string>
+    <string name="name">Name</string>
+    <string name="date_" translatable="false">Date</string>
+    <string name="action_settings">Go Back</string>
+    <string name="password">Password</string>
+    <string name="email_">Email</string>
+    <string name="log_in">Log In</string>
+    <string name="incorrect">Incorrect password or Email</string>
+    <string name="paragraph_incorrect">The password or email that you entered is incorrect. Please try again.</string>
+    <string name="add_project">Add project</string>
+    <string name="attach_an_employee">attach an employee</string>
+    <string name="info">info</string>
+    <string name="date_start">Start Date</string>
+    <string name="date_end">End Date</string>
+    <string name="client_name">Client name</string>
+    <string name="employee_name">Employee name</string>
+    <string name="let_s_add_a_project"><u>let\'s add a project:</u></string>
+    <string name="let_s_add_a_employee"><u>Let\'s add an employee:</u></string>
+    <string name="info_of_the_project"><u>Info of the project:</u></string>
+    <string name="name_cap">Name</string>
+    <string name="info_of_the_employee"><u>info of the employee:</u></string>
+    <string name="Presence">Presence</string>
+    <string name="morning">morning</string>
+    <string name="afternoon">afternoon</string>
+    <string name="evening">evening</string>
+    <string name="return_date">Return Date</string>
+    <string name="return_it">Return it</string>
+    <string name="tool_name">Tool name</string>
+    <string name="let_s_add_a_tool"><u>Let\'s add a tool:</u></string>
+    <string name="add_tool">Add tool</string>
+    <string name="borrowed_date">Borrowed Date</string>
+    <string name="info_of_the_tool"><u>info of the tool:</u></string>
+    <string name="the_app_setting"><u>The app setting:</u></string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="description">Description</string>
+
+</resources>

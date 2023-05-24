@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".SettingApp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/title_page"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/the_app_setting"
+                    android:textSize="24sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold|italic" />
+
+
+                <TextView
+                    android:id="@+id/label1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/title_project"
+                    android:layout_marginStart="30dp"
+                    android:text="Admin Name"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/title_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_page"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toEndOf="@+id/label1"
+                    android:ems="10"
+                    android:hint="@string/name"
+                    android:layout_marginStart="15dp"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:labelFor="@+id/label1"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/label2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/date_start"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/phone"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/date_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/title_project"
+                    android:layout_alignStart="@+id/title_project"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toEndOf="@+id/label2"
+                    android:ems="10"
+                    android:hint="@string/phone"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:labelFor="@+id/label2"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    tools:ignore="TextFields" />
+
+                <TextView
+                    android:id="@+id/label3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/email"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/email"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/date_start"
+                    android:layout_alignStart="@+id/title_project"
+                    android:layout_marginEnd="30dp"
+                    android:ems="10"
+
+                    android:hint="@string/email"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:labelFor="@+id/label3"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    tools:ignore="TextFields" />
+
+                <TextView
+                    android:id="@+id/label4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/password"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/password"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/email"
+                    android:layout_alignStart="@+id/title_project"
+                    android:layout_marginEnd="30dp"
+                    android:ems="10"
+
+                    android:hint="@string/password"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:labelFor="@+id/label3"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black"
+                    tools:ignore="TextFields" />
+
+                <Button
+                    android:id="@+id/edit_employee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/password"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/purple_500"
+                    android:text="@string/edit" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_attach_an_employee"
+        android:title="@string/attach_an_employee"/>
+    <item
+        android:id="@+id/action_info"
+        android:title="@string/info"/>
+    <item
+        android:id="@+id/action_Delete"
+        android:title="@string/delete"/>
+    <!-- Add more menu items as needed -->
+</menu>
