@@ -71,8 +71,7 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
                             Toast.makeText(context, "an employee will be attach selected", Toast.LENGTH_SHORT).show();
                             return true;
                         } else if (item.getItemId() == R.id.action_info) {
-                            Intent intent = new Intent(context, EditProject.class);
-                            context.startActivity(intent);
+                            openactivity(holder);
                             return true;
                         }
                         else if (item.getItemId() == R.id.action_Delete) {
@@ -86,6 +85,8 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
             }
         });
     }
+
+
 
     @Override
     public int getItemCount() {
@@ -122,4 +123,27 @@ public class ProjectAdapter extends RecyclerView.Adapter<ProjectAdapter.ViewHold
         });
         builder.create().show();
     }
+    private void openactivity(ViewHolder holder) {
+        String nom = project_list.get(holder.getAdapterPosition()).getName();
+        String id = project_list.get(holder.getAdapterPosition()).getId();
+        String prenomClient = project_list.get(holder.getAdapterPosition()).getPrenomClient();
+        String start_date = project_list.get(holder.getAdapterPosition()).getStart_date();
+        String date_end = project_list.get(holder.getAdapterPosition()).getDate_end();
+        String phone = project_list.get(holder.getAdapterPosition()).getPhone();
+        String email = project_list.get(holder.getAdapterPosition()).getEmail();
+        String note = project_list.get(holder.getAdapterPosition()).getNote();
+        String status = project_list.get(holder.getAdapterPosition()).getStatus();
+        Intent intent = new Intent(context, EditProject.class);
+        intent.putExtra("id",id);
+        intent.putExtra("nomProjet",nom);
+        intent.putExtra("prenomClient",prenomClient);
+        intent.putExtra("start_date",start_date);
+        intent.putExtra("date_end",date_end);
+        intent.putExtra("phone",phone);
+        intent.putExtra("email",email);
+        intent.putExtra("note",note);
+        intent.putExtra("status",status);
+        context.startActivity(intent);
+    }
+
 }

@@ -32,6 +32,11 @@ public class EditEmployee extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //        -----------------------------------------
 
+        String id = getIntent().getStringExtra("id");
+        String nom = getIntent().getStringExtra("nom");
+        String telephone = getIntent().getStringExtra("telephone");
+        String email_ = getIntent().getStringExtra("email");
+
 
         name = findViewById(R.id.title_project);
         phone = findViewById(R.id.date_start);
@@ -44,13 +49,9 @@ public class EditEmployee extends AppCompatActivity {
             }
         });
 
-        email.setEnabled(false);
-        phone.setEnabled(false);
-        name.setEnabled(false);
-
-        name.setText("Mestapha");
-        phone.setText("0645678798");
-        email.setText("mm@medai.com");
+        name.setText(nom);
+        phone.setText(telephone);
+        email.setText(email_);
     }
     @Override
     public boolean onCreateOptionsMenu(@NonNull Menu menu) {

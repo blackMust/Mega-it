@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.medailast.EditEmployee;
+import com.example.medailast.EditProject;
 import com.example.medailast.ManagementEmployee;
 import com.example.medailast.Models.EmployeeModel;
 import com.example.medailast.R;
@@ -63,8 +64,7 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.ViewHo
                     public boolean onMenuItemClick(MenuItem item) {
                         // Handle menu item selection here
                         if (item.getItemId() == R.id.action_info){
-                            Intent intent = new Intent(context, EditEmployee.class);
-                            context.startActivity(intent);
+                            openactivity(holder);
                             return true;
                         } else if (item.getItemId() == R.id.action_Delete) {
                             confirmDialog(holder, list_employee.get(holder.getAdapterPosition()).getName());
@@ -128,5 +128,21 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.ViewHo
             }
         });
         builder.create().show();
+    }
+
+    private void openactivity(ViewHolder holder) {
+        String id = list_employee.get(holder.getAdapterPosition()).getId();
+        String nom = list_employee.get(holder.getAdapterPosition()).getName();
+        String telephone = list_employee.get(holder.getAdapterPosition()).getPhone();
+        String email = list_employee.get(holder.getAdapterPosition()).getEmail();
+        String nb_project = list_employee.get(holder.getAdapterPosition()).getNum_project();
+
+        Intent intent = new Intent(context, EditEmployee.class);
+
+        intent.putExtra("id",id);
+        intent.putExtra("nom",nom);
+        intent.putExtra("telephone",telephone);
+        intent.putExtra("email",email);
+        context.startActivity(intent);
     }
 }

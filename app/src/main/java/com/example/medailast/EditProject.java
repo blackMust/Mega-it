@@ -21,10 +21,8 @@ public class EditProject extends AppCompatActivity {
     private EditText date_end;
     private Button edit_project;
     private EditText client_name;
-    private EditText address;
     private EditText phone;
     private EditText email;
-    private EditText employee_name;
     private EditText desc;
 
 
@@ -38,37 +36,30 @@ public class EditProject extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //        -----------------------------------------
 
+        String id = getIntent().getStringExtra("id");
+        String nomProjet_ = getIntent().getStringExtra("nomProjet");
+        String prenomClient_ = getIntent().getStringExtra("prenomClient");
+        String start_date_ = getIntent().getStringExtra("start_date");
+        String date_end_ = getIntent().getStringExtra("date_end");
+        String phone_ = getIntent().getStringExtra("phone");
+        String email_ = getIntent().getStringExtra("email");
+        String note_ = getIntent().getStringExtra("note");
+
         title_project = findViewById(R.id.title_project);
         date_start = findViewById(R.id.date_start);
         date_end = findViewById(R.id.date_end);
         client_name = findViewById(R.id.client_name);
-        address = findViewById(R.id.address);
         phone = findViewById(R.id.phone);
         email = findViewById(R.id.email);
-        employee_name = findViewById(R.id.employee_name);
         desc = findViewById(R.id.description);
 
-        title_project.setText("exemple");
-        date_start.setText("12/03/2023");
-        date_end.setText("06/06/2023");
-        client_name.setText("mustapha");
-        address.setText("morocco");
-        phone.setText("0653788937");
-        email.setText("exemple@gmail.com");
-        employee_name.setText("hanan");
-        desc.setText("the best project hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh ever");
-
-//        disactivate the editable view
-        title_project.setEnabled(false);
-        date_start.setEnabled(false);
-        date_end.setEnabled(false);
-        client_name.setEnabled(false);
-        address.setEnabled(false);
-        phone.setEnabled(false);
-        email.setEnabled(false);
-        employee_name.setEnabled(false);
-        desc.setKeyListener(null);
-
+        title_project.setText(nomProjet_);
+        date_start.setText(start_date_);
+        date_end.setText(date_end_);
+        client_name.setText(prenomClient_);
+        phone.setText(phone_);
+        email.setText(email_);
+        desc.setText(note_);
 
 
         edit_project = findViewById(R.id.edit_project);

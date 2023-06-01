@@ -21,6 +21,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.medailast.Adapters.AdapterTools;
 import com.example.medailast.Adapters.EmployeeAdapter;
 import com.example.medailast.Models.EmployeeModel;
+import com.example.medailast.Models.GlobleValues;
 import com.example.medailast.Models.ToolsModel;
 
 import org.json.JSONArray;
@@ -47,7 +48,8 @@ public class Tools extends AppCompatActivity {
         //        -----------------------------------------
         list_tools = new ArrayList<>();
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://192.168.1.21/rest api/api/post tools/post.php";
+        String host = new GlobleValues().getHost();
+        String url = "http://"+host+"/rest api/api/post tools/post.php";
 //        get the data from the server
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override

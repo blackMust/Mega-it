@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.medailast.Models.GlobleValues;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -47,7 +48,8 @@ public class Login2 extends AppCompatActivity {
 
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://192.168.1.21/rest api/api/post log/post.php";
+        String host = new GlobleValues().getHost();
+        String url = "http://"+host+"/rest api/api/post log/post.php";
 
 
         Button button = findViewById(R.id.login_btn);

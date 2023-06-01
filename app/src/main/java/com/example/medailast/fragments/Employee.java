@@ -22,6 +22,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.medailast.Adapters.EmployeeAdapter;
 import com.example.medailast.Adapters.ProjectAdapter;
 import com.example.medailast.Models.EmployeeModel;
+import com.example.medailast.Models.GlobleValues;
 import com.example.medailast.Models.Project_model;
 import com.example.medailast.R;
 
@@ -49,21 +50,30 @@ public class Employee extends Fragment {
         employee_models = new ArrayList<>();
 
         RequestQueue queue = Volley.newRequestQueue(view.getContext());
-        String url = "http://192.168.1.21/rest api/api/post - employee/post.php";
+        String host = new GlobleValues().getHost();
+        String url = "http://"+host+"/rest api/api/post - employee/post.php";
 //        get the data from the server
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
 
                 for (int i=0; i<response.length(); i++){
-                    String num = "";
+                    String id = "";
+                    String nom = "";
+                    String prenom = "";
+                    String telephone = "";
+                    String email = "";
                     String nb_project = "";
                     try {
                         JSONObject jsonObject = response.getJSONObject(i);
-                        num = jsonObject.getString("prenom") + " " + jsonObject.getString("nom");
+                        id = jsonObject.getString("id");
+                        nom = jsonObject.getString("nom");
+                        prenom = jsonObject.getString("prenom");
+                        telephone = jsonObject.getString("telephone");
+                        email = jsonObject.getString("email");
                         nb_project = jsonObject.getString("nb_project");
 
-                        employee_models.add(new EmployeeModel(num, nb_project));
+                        employee_models.add(new EmployeeModel(id, nom + " " + prenom, telephone, email, nb_project));
 
                     } catch (JSONException e) {
                         throw new RuntimeException(e);
